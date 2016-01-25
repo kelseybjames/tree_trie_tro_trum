@@ -7,5 +7,6 @@ class LetterNode < Struct.new(:letter, :depth, :children, :parent, :definition)
 
   def child_by_letter(letter)
     self.children.each { |child| return child if child.letter == letter}
+    nil
   end
 end
